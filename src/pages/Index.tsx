@@ -1,4 +1,3 @@
-
 import React, { useEffect } from 'react';
 import { Check, ArrowRight, Calendar, File, Search, User, Clock } from 'lucide-react';
 import Navbar from '@/components/Navbar';
@@ -52,10 +51,10 @@ const Index = () => {
               variant="primary"
               className="opacity-0 animate-fade-in animate-delay-300"
               onClick={() => {
-                document.getElementById('diagnostic')?.scrollIntoView({ behavior: 'smooth' });
+                document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
               }}
             >
-              Quero Agendar Meu Diagnóstico <ArrowRight className="ml-2 w-5 h-5 inline" />
+              Quero Falar com um Especialista <ArrowRight className="ml-2 w-5 h-5 inline" />
             </Button>
           </div>
         </div>
@@ -218,21 +217,21 @@ const Index = () => {
           
           <div className="grid md:grid-cols-3 gap-8">
             <ImageCard 
-              src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" 
+              src="https://classic.exame.com/wp-content/uploads/2025/03/joao-kepler.jpg" 
               alt="João Kepler" 
               title="João Kepler" 
               role="Investidor e especialista em crescimento"
               className="animate-delay-100"
             />
             <ImageCard 
-              src="https://images.unsplash.com/photo-1568602471122-7832951cc4c5?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" 
+              src="https://veja.abril.com.br/wp-content/uploads/2025/04/IMG-20250415-WA0015.jpg" 
               alt="Theo Braga" 
               title="Theo Braga" 
               role="CEO SME, referência em performance de equipes"
               className="animate-delay-200"
             />
             <ImageCard 
-              src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&q=80" 
+              src="/images/fabio-fiorini.jpg" 
               alt="Fábio Fiorini" 
               title="Fábio Fiorini" 
               role="CEO Noby Educação, mentor de 4.500+ empresas"
@@ -297,15 +296,14 @@ const Index = () => {
               Através do nosso diagnóstico especializado, sua empresa receberá insights valiosos 
               para potencializar suas vendas e alcançar resultados extraordinários.
             </p>
-            <Button 
-              variant="primary"
-              className="opacity-0 animate-fade-in animate-delay-200"
-              onClick={() => {
-                document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
-              }}
+            <a 
+              href="https://diagnostico.lovable.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="cta-button opacity-0 animate-fade-in animate-delay-200 inline-flex items-center"
             >
               Iniciar Diagnóstico de Vendas <ArrowRight className="ml-2 w-5 h-5 inline" />
-            </Button>
+            </a>
           </div>
         </div>
       </section>
