@@ -21,7 +21,7 @@ const DiagnosticSection = () => {
             rel="noopener noreferrer"
             className="cta-button opacity-0 animate-fade-in animate-delay-200 inline-flex items-center"
           >
-            Iniciar Diagnóstico de Vendas <ArrowRight className="ml-2 w-5 h-5 inline" />
+            Iniciar Diagnóstico Gratuito <ArrowRight className="ml-2 w-5 h-5 inline" />
           </a>
         </div>
       </div>
