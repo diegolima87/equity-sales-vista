@@ -29,7 +29,7 @@ const TeamSection = () => {
             className="animate-delay-200"
           />
           <ImageCard 
-            src="/images/fabio-fiorini.jpg" 
+            src="/lovable-uploads/0477ee45-36c0-4057-835a-5255d577d14c.png" 
             alt="Fábio Fiorini" 
             title="Fábio Fiorini" 
             role="CEO Noby Educação, mentor de 4.500+ empresas"

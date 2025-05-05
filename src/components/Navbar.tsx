@@ -37,7 +37,7 @@ const Navbar = () => {
         <div className="flex items-center">
           <a href="#" className="text-2xl font-bold">
             <img 
-              src={isScrolled ? "/images/logo-black.png" : "/images/logo-white.png"} 
+              src={isScrolled ? "/lovable-uploads/3fd755e8-d5dd-4d27-a7b2-3458cb430087.png" : "/lovable-uploads/a557187d-3d07-49b9-b08c-7ed9688fb655.png"} 
               alt="Equity Sales" 
               className="h-8 md:h-10"
             />

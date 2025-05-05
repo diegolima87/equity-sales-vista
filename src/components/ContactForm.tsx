@@ -8,6 +8,21 @@ const ContactForm = () => {
   
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    
+    // Capturar os dados do formulário
+    const formData = new FormData(e.currentTarget);
+    const formValues = {
+      name: formData.get('name'),
+      company: formData.get('company'),
+      role: formData.get('role'),
+      email: formData.get('email'),
+      phone: formData.get('phone'),
+    };
+    
+    // Aqui seria onde você enviaria os dados para um serviço de email
+    // No ambiente atual, exibimos apenas um toast de confirmação
+    console.log(`Enviando dados para deklima@gmail.com e fabiofioirninues@gmail.com`, formValues);
+    
     toast({
       title: "Formulário enviado",
       description: "Entraremos em contato em breve para agendar seu diagnóstico.",
@@ -21,6 +36,7 @@ const ContactForm = () => {
         <input
           type="text"
           id="name"
+          name="name"
           required
           className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-gold focus:border-transparent transition-all"
           placeholder="Seu nome completo"
@@ -32,6 +48,7 @@ const ContactForm = () => {
         <input
           type="text"
           id="company"
+          name="company"
           required
           className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-gold focus:border-transparent transition-all"
           placeholder="Nome da sua empresa"
@@ -43,6 +60,7 @@ const ContactForm = () => {
         <input
           type="text"
           id="role"
+          name="role"
           required
           className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-gold focus:border-transparent transition-all"
           placeholder="Seu cargo na empresa"
@@ -54,6 +72,7 @@ const ContactForm = () => {
         <input
           type="email"
           id="email"
+          name="email"
           required
           className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-gold focus:border-transparent transition-all"
           placeholder="seu.email@exemplo.com"
@@ -65,6 +84,7 @@ const ContactForm = () => {
         <input
           type="tel"
           id="phone"
+          name="phone"
           required
           className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-gold focus:border-transparent transition-all"
           placeholder="(00) 00000-0000"
