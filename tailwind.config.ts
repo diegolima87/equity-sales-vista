@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -14,6 +15,10 @@ export default {
 			center: true,
 			padding: '2rem',
 			screens: {
+				'sm': '640px',
+				'md': '768px',
+				'lg': '1024px',
+				'xl': '1280px',
 				'2xl': '1400px'
 			}
 		},
@@ -61,7 +66,8 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				gold: '#c29226',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
@@ -84,11 +90,79 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'fade-in': {
+					'0%': {
+						opacity: '0',
+						transform: 'translateY(20px)'
+					},
+					'100%': {
+						opacity: '1',
+						transform: 'translateY(0)'
+					}
+				},
+				'slide-up': {
+					'0%': {
+						transform: 'translateY(100px)',
+						opacity: '0'
+					},
+					'100%': {
+						transform: 'translateY(0)',
+						opacity: '1'
+					}
+				},
+				'pulse-slow': {
+					'0%, 100%': {
+						transform: 'scale(1)'
+					},
+					'50%': {
+						transform: 'scale(1.05)'
+					}
+				},
+				'float': {
+					'0%, 100%': {
+						transform: 'translateY(0)'
+					},
+					'50%': {
+						transform: 'translateY(-10px)'
+					}
+				},
+				'gradient-x': {
+					'0%, 100%': {
+						'background-position': '0% 50%'
+					},
+					'50%': {
+						'background-position': '100% 50%'
+					}
+				},
+				'shimmer': {
+					'0%': {
+						'background-position': '200% 0'
+					},
+					'100%': {
+						'background-position': '-200% 0'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'fade-in': 'fade-in 0.7s ease-out forwards',
+				'slide-up': 'slide-up 0.8s ease-out forwards',
+				'pulse-slow': 'pulse-slow 3s infinite',
+				'float': 'float 6s ease-in-out infinite',
+				'gradient-x': 'gradient-x 15s ease infinite',
+				'shimmer': 'shimmer 3s infinite linear'
+			},
+			fontFamily: {
+				'sans': ['Inter', 'sans-serif'],
+				'display': ['Poppins', 'sans-serif'],
+			},
+			backgroundImage: {
+				'hero-pattern': 'linear-gradient(135deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.6) 100%), url("/images/hero-bg.jpg")',
+				'gold-gradient': 'linear-gradient(90deg, #c29226 0%, #e0b349 100%)',
+				'cta-gradient': 'linear-gradient(90deg, #000000 0%, #222222 100%)',
+				'shimmer-gradient': 'linear-gradient(90deg, transparent 0%, rgba(194, 146, 38, 0.2) 25%, rgba(194, 146, 38, 0.6) 50%, rgba(194, 146, 38, 0.2) 75%, transparent 100%)',
 			}
 		}
 	},
