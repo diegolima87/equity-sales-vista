@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+  equity-sales:
+    build: .
+    container_name: equity-sales
+    restart: unless-stopped
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.equitysales.rule=Host(`equitysales.com.br`)"
+      - "traefik.http.routers.equitysales.entrypoints=websecure"
+      - "traefik.http.routers.equitysales.tls.certresolver=letsencrypt"
+      - "traefik.http.services.equitysales.loadbalancer.server.port=80"
