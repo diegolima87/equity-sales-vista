@@ -16,7 +16,7 @@ const DiagnosticSection = () => {
             para potencializar suas vendas e alcançar resultados extraordinários.
           </p>
           <a 
-            href="https://diagnostico.lovable.app/"
+            href="https://diagnostico-de-vendas.lovable.app/"
             target="_blank"
             rel="noopener noreferrer"
             className="cta-button opacity-0 animate-fade-in animate-delay-200 inline-flex items-center"
